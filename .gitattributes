@@ -1,0 +1,10 @@
+# Keep the working tree on CRLF to match .editorconfig, but never for files a Linux
+# container or CI shell has to parse.
+* text=auto eol=crlf
+
+*.sh text eol=lf
+db/init/*.sql text eol=lf
+docker-compose.yml text eol=lf
+.github/workflows/*.yml text eol=lf
+
+*.pdf binary
