@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Every setting is inherited from Directory.Build.props. SharedKernel takes no
+       package references: the primitives here must stay dependency-free. -->
+
+</Project>

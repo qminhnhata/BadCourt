@@ -8,4 +8,12 @@
   <!-- Versions are added by the step that first references the package, so every entry
        here is backed by code that consumes it. -->
 
+  <!-- Test stack. Microsoft.NET.Test.Sdk and xunit.runner.visualstudio are deliberately
+       absent: xunit.v3 carries the Microsoft.Testing.Platform entry point, and the VSTest
+       bridge is no longer supported on the .NET 10 SDK. -->
+  <ItemGroup>
+    <PackageVersion Include="Shouldly" Version="4.3.0" />
+    <PackageVersion Include="xunit.v3" Version="4.0.0" />
+  </ItemGroup>
+
 </Project>

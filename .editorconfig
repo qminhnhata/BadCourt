@@ -88,3 +88,15 @@ dotnet_naming_symbols.private_field_symbols.applicable_kinds = field
 dotnet_naming_symbols.private_field_symbols.applicable_accessibilities = private
 dotnet_naming_style.underscore_camel.required_prefix = _
 dotnet_naming_style.underscore_camel.capitalization = camel_case
+
+# --- analyzers we deliberately accept ---
+# Each entry below is added by the step whose build it broke, never in advance.
+
+# CA1716: cross-language keyword clashes. 'Error' is the standard name for this type in the
+# Result pattern, and the codebase has no VB or F# consumers to protect.
+dotnet_diagnostic.CA1716.severity = none
+
+[tests/**/*.cs]
+# CA1707: underscores in member names. Test methods are sentences, not API surface; the
+# name is the specification and reads better with them.
+dotnet_diagnostic.CA1707.severity = none

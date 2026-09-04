@@ -1,2 +1,9 @@
 <Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/api/">
+    <Project Path="src/api/BadCourt.SharedKernel/BadCourt.SharedKernel.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BadCourt.UnitTests/BadCourt.UnitTests.csproj" />
+  </Folder>
 </Solution>
