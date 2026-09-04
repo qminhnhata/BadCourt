@@ -8,10 +8,18 @@
   <!-- Versions are added by the step that first references the package, so every entry
        here is backed by code that consumes it. -->
 
+  <!-- SharedKernel: the dispatcher and the decorators around it. Abstractions only - the
+       kernel describes a pipeline, it does not host one. -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.11" />
+    <PackageVersion Include="Scrutor" Version="7.0.0" />
+  </ItemGroup>
+
   <!-- Test stack. Microsoft.NET.Test.Sdk and xunit.runner.visualstudio are deliberately
        absent: xunit.v3 carries the Microsoft.Testing.Platform entry point, and the VSTest
        bridge is no longer supported on the .NET 10 SDK. -->
   <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.11" />
     <PackageVersion Include="Shouldly" Version="4.3.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.0" />
   </ItemGroup>
